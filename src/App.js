@@ -1,6 +1,106 @@
 import './App.css';
+import emailjs from 'emailjs-com';
 
 function App() {
+    const onHnaniceReservation = (e) => {
+        e.preventDefault();
+        let name, date, phone, email, note, count;
+        name = document.getElementById('hnaniceName').value
+        date = document.getElementById('hnaniceDate').value;
+        count = document.getElementById('hnaniceCount').value;
+        email = document.getElementById('hnaniceEmail').value;
+        phone = document.getElementById('hnanicePhone').value;
+        note = document.getElementById('hnaniceNote').value;
+
+        const templateParams = {
+            name,
+            subject: "Rezervace - HNANICE",
+            date: date ? 'Datum: ' + date : null,
+            phone: phone ? 'Telefon: ' + phone: null,
+            email: email ? 'Email: ' + email : null,
+            count: count? 'Počet osob: ' + count: null,
+            note: note ? 'Poznámka: ' + note : null,
+        };
+
+        if (name && (email || phone)) {
+            emailjs.send('service_wgqaz3k', 'template_n9xis7z', templateParams, 'user_P3NlbEgxs3PlLOoZ4vkSt')
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Rezervace byla úspěšně odeslána.');
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
+        } else {
+            alert('Vyplňte prosím Jméno a příjmení a alespoň jeden kontakt.');
+        }
+    }
+
+    const onModrakReservation = (e) => {
+        e.preventDefault();
+        let name, date, phone, email, note, count;
+        name = document.getElementById('modrakName').value
+        date = document.getElementById('modrakDate').value;
+        count = document.getElementById('modrakCount').value;
+        email = document.getElementById('modrakEmail').value;
+        phone = document.getElementById('modrakPhone').value;
+        note = document.getElementById('modrakNote').value;
+
+        const templateParams = {
+            name,
+            subject: "Rezervace - U Modráka",
+            date: date ? 'Datum: ' + date : null,
+            phone: phone ? 'Telefon: ' + phone: null,
+            email: email ? 'Email: ' + email : null,
+            count: count? 'Počet osob: ' + count: null,
+            note: note ? 'Poznámka: ' + note : null,
+        };
+
+        if (name && (email || phone)) {
+            emailjs.send('service_wgqaz3k', 'template_n9xis7z', templateParams, 'user_P3NlbEgxs3PlLOoZ4vkSt')
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Rezervace byla úspěšně odeslána.');
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
+        } else {
+            alert('Vyplňte prosím Jméno a příjmení a alespoň jeden kontakt.');
+        }
+    }
+
+    const onVinoVanReservation = (e) => {
+        e.preventDefault();
+        let name, date, phone, email, note, count;
+        name = document.getElementById('vinoVanName').value
+        date = document.getElementById('vinoVanDate').value;
+        count = document.getElementById('vinoVanCount').value;
+        email = document.getElementById('vinoVanEmail').value;
+        phone = document.getElementById('vinoVanPhone').value;
+        note = document.getElementById('vinoVanNote').value;
+
+        const templateParams = {
+            name,
+            subject: "Rezervace - Víno van",
+            date: date ? 'Datum: ' + date : null,
+            phone: phone ? 'Telefon: ' + phone: null,
+            email: email ? 'Email: ' + email : null,
+            count: count? 'Počet osob: ' + count: null,
+            note: note ? 'Poznámka: ' + note : null,
+        };
+
+        if (name && (email || phone)) {
+            emailjs.send('service_wgqaz3k', 'template_n9xis7z', templateParams, 'user_P3NlbEgxs3PlLOoZ4vkSt')
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Rezervace byla úspěšně odeslána.');
+                }, (err) => {
+                    console.log('FAILED...', err);
+                });
+        } else {
+            alert('Vyplňte prosím Jméno a příjmení a alespoň jeden kontakt.');
+        }
+    }
+
     return (
         <div className="App">
             <div id="loader">
@@ -624,7 +724,7 @@ function App() {
                                 <p id="modrakErrorText"/>
 
                                 <div className="order">
-                                    <div className="default-button" onClick="onModrakReservation()"
+                                    <div className="default-button" onClick={onModrakReservation}
                                          data-dismiss="modal"
                                          aria-label="Close">Objednat degustaci
                                     </div>
@@ -662,9 +762,9 @@ function App() {
                                           cols="50"/>
 
                                 <div className="order">
-                                    <div className="default-button" onClick="onHnaniceReservation()"
-                                         data-dismiss="modal"
-                                         aria-label="Close">Objednat degustaci
+                                    <div className="default-button" onClick={onHnaniceReservation}
+                                        data-dismiss="modal"
+                                        aria-label="Close">Objednat degustaci
                                     </div>
                                 </div>
                             </div>
@@ -703,7 +803,7 @@ function App() {
                                           cols="50"/>
 
                                 <div className="order">
-                                    <div className="default-button" onClick="onVinoVanReservation()"
+                                    <div className="default-button" onClick={onVinoVanReservation}
                                          data-dismiss="modal"
                                          aria-label="Close">Rezervovat
                                     </div>
@@ -821,7 +921,7 @@ function App() {
             </footer>
 
             <div className="scroll-top" data-scroll="up">
-                <span></span>
+                <span>{'<'}</span>
             </div>
 
             {/*<div className="banner">
