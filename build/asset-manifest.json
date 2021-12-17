@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4565c71b.css",
+    "main.js": "/static/js/main.440a6cb6.js",
+    "static/js/787.eb26fd11.chunk.js": "/static/js/787.eb26fd11.chunk.js",
+    "static/media/wines.jpg": "/static/media/wines.30afa6bc26e7f4877b1f.jpg",
+    "static/media/lisovna.jpg": "/static/media/lisovna.bd4dd9b6bb3075b6d42d.jpg",
+    "static/media/varieties.jpg": "/static/media/varieties.163d4c621d7a53a85f86.jpg",
+    "static/media/home.jpg": "/static/media/home.c9875129b56dceef262a.jpg",
+    "static/media/knile-light-webfont.svg": "/static/media/knile-light-webfont.2080224c9e6723bd64d8.svg",
+    "static/media/knile-regular-webfont.svg": "/static/media/knile-regular-webfont.1f29e93f7f00893f51a3.svg",
+    "static/media/knile-regular-webfont.ttf": "/static/media/knile-regular-webfont.c45ee9ed661c59294302.ttf",
+    "static/media/knile-light-webfont.ttf": "/static/media/knile-light-webfont.c9bc2bdf161a4b94e3fa.ttf",
+    "static/media/accommodations.jpeg": "/static/media/accommodations.d318e57e751d997e8026.jpeg",
+    "static/media/celebrations.jpg": "/static/media/celebrations.ba34e0d5ef2ce9301410.jpg",
+    "static/media/knile-light-webfont.woff": "/static/media/knile-light-webfont.ee195b01ea9e712f8791.woff",
+    "static/media/knile-regular-webfont.woff": "/static/media/knile-regular-webfont.3841170f3bbaa1ae71ab.woff",
+    "static/media/knile-light-webfont.eot": "/static/media/knile-light-webfont.2db6c1473fde845df987.eot",
+    "static/media/knile-regular-webfont.eot": "/static/media/knile-regular-webfont.73c41058fd6395c20fdf.eot",
+    "static/media/knile-light-webfont.woff2": "/static/media/knile-light-webfont.98dd6b0431b70c01971d.woff2",
+    "static/media/knile-regular-webfont.woff2": "/static/media/knile-regular-webfont.f2208a43f22c53e1588f.woff2",
+    "index.html": "/index.html",
+    "main.4565c71b.css.map": "/static/css/main.4565c71b.css.map",
+    "main.440a6cb6.js.map": "/static/js/main.440a6cb6.js.map",
+    "787.eb26fd11.chunk.js.map": "/static/js/787.eb26fd11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4565c71b.css",
+    "static/js/main.440a6cb6.js"
+  ]
+}
